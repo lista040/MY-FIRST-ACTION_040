@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8f9fa; /* เปลี่ยนพื้นหลังเป็นสีเทาอ่อน สบายตากว่าสีขาวล้วน */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* เปลี่ยนฟอนต์ให้ดูโมเดิร์นขึ้น */
+  color: #333333;
+}
+
+.box01 {
+  /* ปรับ margin จาก 15rem ที่กว้างเกินไป มาใช้ padding ด้านใน และทำเป็นการ์ดสีขาว */
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+  border-radius: 16px; /* ทำมุมโค้งมนนุ่ม ๆ */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* ใส่เงานุ่ม ๆ ให้กล่องดูมีมิติ */
+  max-width: 450px;
+  width: 90%;
+  text-align: center;
+
+  h1 {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    color: #666666;
+    font-weight: 400;
+    margin-bottom: 2rem; /* เว้นระยะห่างก่อนถึงปุ่ม */
+  }
+
+  button[type="button"] {
+    font-size: 18px; /* ขนาดกำลังพอดี ไม่ใหญ่เกินไป */
+    font-weight: 600;
+    padding: 12px 32px;
+    color: white;
+    background-color: #2ecc71; /* สีเขียวโทนสว่างและดูทันสมัยขึ้น */
+    border: none;
+    border-radius: 8px; /* ทำปุ่มให้โค้งมนรับกับกล่อง */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(46, 204, 113, 0.2);
+    
+    /* สลักสำคัญ: ใส่ transition เพื่อให้เวลา hover แล้วมันค่อยๆ ขยาย ไม่กระตุก */
+    transition: all 0.3s ease; 
+  }
+
+  button[type="button"]:hover {
+    background-color: #27ae60; /* เข้มขึ้นเล็กน้อยเวลาชี้ */
+    transform: translateY(-3px); /* แทนที่จะเพิ่ม font-size ให้ใช้การยกปุ่มลอยขึ้นจะสวยกว่ามาก */
+    box-shadow: 0 8px 15px rgba(46, 204, 113, 0.3); /* เพิ่มเงาให้ดูเหมือนลอยขึ้นจริง */
+  }
+
+  button[type="button"]:active {
+    transform: translateY(-1px); /* เวลาคลิกให้ยุบลงไปนิดนึง เพิ่มลูกเล่นการกด */
+  }
+}
